@@ -4,3 +4,4 @@ node_modules
 npm-debug.log
 .project
 config.js
+app_config.js
