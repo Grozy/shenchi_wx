@@ -12,7 +12,7 @@ router.get('/', function(req, res) {
   const baseUrl = "https://open.weixin.qq.com/connect/oauth2/authorize?";
   let queryParams = {
     appid: config.appId,
-    redirect_uri: "http://qy16009187.iask.in/auth/get_wx_access_token",
+    redirect_uri: "http://123.206.85.19/auth/get_wx_access_token",
     response_type: "code",
     scope:"snsapi_userinfo",
     state :"1"
