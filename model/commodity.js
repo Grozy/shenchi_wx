@@ -252,9 +252,11 @@ Commodity.queryWithLJM = function(ljm, callback) {
     if (err) {
       return callback(err);
     }
+    console.log("got db pool...");
     // 获取仓位的时候先从commodityinfo表中查询仓位信息，如果info表中没有，直接使用电脑的数据库结果
     connection.query("SELECT * FROM KC WHERE PYDM like '%" + ljm + "%'", function(err, result) {
       if (err) {
+        console.log("search error:" + err);
         return callback(err);
       } else {
         console.log("search result:" + result);
